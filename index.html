@@ -4,11 +4,109 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a922b1aade.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
   </head>
   <body>
-    <h1>Hellp Git</h1>
+    <div class="container mt-5">
+      <div class="card weather-frame">
+        <div class="container">
+          <div class="row search-field">
+            <div class="col-12">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter your city"
+                  id="city-input"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="search-button"
+                >
+                  Search
+                </button>
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="current-button"
+                >
+                  Current
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row daily-forecast">
+            <div class="col-4 text-center current-forecast">
+              <h1 id="current-city">Kyiv</h1>
+              <div id="current-time"></div>
+
+              <!-- <i class="fa-regular fa-snowflake snow-icon"></i> -->
+              <span class="current-temperature">-4°C</span>
+
+              <!-- <span class="units">
+                <a href="#" id="celsius">°C</a> |
+
+                <a href="#" id="fahrenheit">°F</a>
+              </span> -->
+
+              <div class="describtion">Mostly cloudy</div>
+              <div>Humidity: 67%</div>
+              <div>Wind: 7 km/h</div>
+            </div>
+            <div class="col-2 text-center">
+              <div class="day-forecast">
+                <h6>Monday</h6>
+                <i class="fa-regular fa-snowflake week-icon"></i>
+                <span class="day-temperature">-3°C</span>
+              </div>
+              <div>
+                <h6>Tuesday</h6>
+                <i class="fa-regular fa-snowflake week-icon"></i>
+                <span class="day-temperature">-1°C</span>
+              </div>
+            </div>
+            <div class="col-2 text-center">
+              <div class="day-forecast">
+                <h6>Wednesday</h6>
+                <i class="fa-regular fa-cloud-sun week-icon"></i>
+                <span class="day-temperature">0°C</span>
+              </div>
+              <div>
+                <h6>Thursday</h6>
+                <i class="fa-regular fa-snowflake week-icon"></i>
+                <span class="day-temperature">-2°C</span>
+              </div>
+            </div>
+            <div class="col-2 text-center">
+              <div class="day-forecast">
+                <h6>Friday</h6>
+                <i class="fa-regular fa-cloud-sun week-icon"></i>
+                <span class="day-temperature">0°C</span>
+              </div>
+              <div>
+                <h6>Saturday</h6>
+                <i class="fa-regular fa-snowflake week-icon"></i>
+                <span class="day-temperature">-1°C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
